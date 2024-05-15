@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor(private router: Router) {
+  }
+
+  public hasRoute(route: string) {
+    return this.router.url.includes(route);
+  }
 }

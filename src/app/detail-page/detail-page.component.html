@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>{{character?.name}}</h1>
+  <img src="{{character?.image}}" class="img-fluid" alt="Photo of a character">
+
+  <div class="row">
+    <div class="col">
+      <div echarts [options]="options" (chartInit)="onChartInit($event)" [loading]="false" theme="macarons" class="chart"></div>
+      <button id="DataButton" type="button" class="btn btn-dark" (click)="shuffleData()">Shuffle data</button>
+    </div>
+    <div class="col">
+      <mat-card class="mat-card mat-elevation-z4">
+        <mat-card-content>
+          <p class="desc" style="padding-top: 10px">
+            {{character?.description}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+

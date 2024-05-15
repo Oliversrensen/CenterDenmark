@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "description": "Gandalf, known temporarily as the Grey and later the White, and originally named Olórin (Quenya), was an Istar (Wizard), dispatched to Middle-earth in the Third Age to combat the threat of Sauron. ",
+      "image": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/11/Gandalf-The-Hobbit.jpg",
+      "name": "Gandalf the Grey",
+      "subtitle": "Wisest of the Maiar",
+      "id": "ae4f"
+    },
+    {
+      "description": "Gimli, son of Glóin, was a Dwarf of the House of Durin and a member of the Fellowship of the Ring.",
+      "image": "https://assetsio.gnwcdn.com/gimli_OVQOp6S.jpg",
+      "name": "Gimli, son of Glóin",
+      "subtitle": "Elf-friend, Lockbearer",
+      "id": "e0ce"
+    },
+    {
+      "id": "0b1a",
+      "name": "Legolas, son of Thranduil",
+      "description": "Legolas was a Sindar Elf who joined the Fellowship of the Ring in the Third Age. Son of the Elvenking Thranduil of Mirkwood, Legolas was Mirkwood's prince, a messenger, and a master archer.",
+      "image": "https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/large/800/Legolas-Greenleaf.The-Lord-of-the-Rings-The-Fellowship-of-the-Ring.webp",
+      "subtitle": "Prince of the Woodland Realms"
+    },
+    {
+      "id": "fe0b",
+      "name": "Aragorn, son of Arathorn",
+      "description": "Aragorn II, son of Arathorn II and Gilraen, also known as Strider and Elessar, was the 16th and last Chieftain of the Dúnedain of the North; later crowned King Elessar Telcontar (March 1, 2931 - FO 120), the 26th King of Arnor, 35th King of Gondor and first High King of Gondor and Arnor since the short reign of Isildur.",
+      "image": "https://cdn.mos.cms.futurecdn.net/pj4peqQeuvoxSMrm3GGoER-1200-80.jpg",
+      "subtitle": "King of Gondor"
+    },
+    {
+      "id": "3c09",
+      "name": "Frodo Baggins",
+      "description": "Frodo Baggins, son of Drogo Baggins, was a hobbit of the Shire in the late Third Age. He is commonly considered Tolkien's most renowned character for his leading role in the Quest of the Ring, in which he bore the One Ring to Mount Doom, where it was destroyed.",
+      "image": "https://www.looper.com/img/gallery/frodo-baggins-12-best-moments-in-the-lord-of-the-rings-franchise-ranked/intro-1663422318.jpg",
+      "subtitle": "Bearer of the One Ring"
+    },
+    {
+      "id": "d0ae",
+      "name": "Théoden, son of Thengel",
+      "description": "Théoden, son of Thengel and Morwen Steelsheen, was the seventeenth King of Rohan, last of the Second Line of the royal House of Eorl.",
+      "image": "https://static1.moviewebimages.com/wordpress/wp-content/uploads/2022/11/theoden01-2.jpg",
+      "subtitle": "King of Rohan"
+    }
+  ]
+}

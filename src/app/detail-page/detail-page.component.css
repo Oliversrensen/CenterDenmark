@@ -1,0 +1,24 @@
+h1{
+  text-align: center;
+  font-family: ringbearer, serif;
+  font-size: 50px;
+  margin-top: 30px;
+  color: darkgoldenrod;
+}
+
+img {
+  margin: auto;
+  display:flex;
+}
+
+.chart {
+  background-color: #ccb2a2;
+}
+
+.mat-card {
+  background-color: #ccb2a2;
+}
+
+.row {
+  margin-top: 20px;
+}

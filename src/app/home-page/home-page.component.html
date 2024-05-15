@@ -1,0 +1,58 @@
+<button id="addButton" type="button" class="btn btn-dark" (click)="open(demoModal)">Add Character</button>
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.md="33%" *ngFor="let character of characters$ | async">
+      <mat-card class="mat-card mat-elevation-z4">
+        <mat-card-header>
+          <mat-card-title>{{character.name}}</mat-card-title>
+          <mat-card-subtitle>{{character.subtitle}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{character.image}}" alt="Photo of a character">
+        <mat-card-content>
+          <p class="desc" style="padding-top: 10px">
+            {{character.description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="goToDetails(character.name)">Go to details</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<ng-template #demoModal let-modal>
+  <div class="modal-header">
+    <h1 class="modal-title" id="modal-basic-title">New Character</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="name">Name</span>
+      </div>
+      <input type="text" [(ngModel)]="newChar.name" class="form-control" placeholder="Oliver" aria-describedby="name">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="subtitle">Subtitle</span>
+      </div>
+      <input type="text" [(ngModel)]="newChar.subtitle" class="form-control" placeholder="A great guy" aria-describedby="subtitle">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="imagelink">Image link</span>
+      </div>
+      <input type="text" [(ngModel)]="newChar.image" class="form-control" placeholder="Oliver.jpg"  aria-describedby="imagelink">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="description">description</span>
+      </div>
+      <input type="text" [(ngModel)]="newChar.description" class="form-control" placeholder="What a swell guy" aria-describedby="description">
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-light" (click)="createChar()">Create character</button>
+  </div>
+</ng-template>

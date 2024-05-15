@@ -1,0 +1,23 @@
+
+.bg-dark {
+  background-color: #293143 !important;
+}
+
+h1 {
+  color: darkgoldenrod;
+  font-size: 40px;
+  font-family: ringbearer, serif;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#title {
+  text-decoration: none;
+}
+
+.titleDiv{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+

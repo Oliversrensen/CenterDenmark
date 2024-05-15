@@ -1,0 +1,49 @@
+.mat-card {
+  background-color: #ccb2a2;
+}
+
+.modal-header {
+  background-color: #293143;
+}
+
+.modal-body {
+  background-color: #171b26;
+}
+
+.modal-footer {
+  background-color: #293143;
+}
+
+.modal-title {
+  font-family: ringbearer, serif;
+  color: darkgoldenrod;
+}
+
+mat-card-title {
+  font-family: aniron, serif !important;
+}
+mat-card-subtitle {
+  font-family: aniron, serif !important;
+  margin-bottom: 10px;
+}
+
+.content {
+  padding: 16px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.desc {
+  font-family: Bahnschrift, serif;
+}
+
+#addButton {
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-group-text {
+  width: 150px;
+}

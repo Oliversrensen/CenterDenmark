@@ -4,6 +4,7 @@
 
 .modal-header {
   background-color: #293143;
+  display: inline-block;
 }
 
 .modal-body {
@@ -12,6 +13,7 @@
 
 .modal-footer {
   background-color: #293143;
+  justify-content: space-between;
 }
 
 .modal-title {
@@ -35,6 +37,10 @@ mat-card-subtitle {
 
 .desc {
   font-family: Bahnschrift, serif;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 1000px;
 }
 
 #addButton {
@@ -53,4 +59,8 @@ mat-card-subtitle {
 }
 mat-card-actions {
   justify-content: space-between;
+}
+
+.modal-header{
+  text-align: center;
 }

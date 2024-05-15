@@ -24,6 +24,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {FormsModule} from "@angular/forms";
 import {MatInput} from "@angular/material/input";
 import {NgxEchartsDirective, NgxEchartsModule} from "ngx-echarts";
+import {MatSlider, MatSliderThumb} from "@angular/material/slider";
 
 @NgModule({
   declarations: [
@@ -53,7 +54,9 @@ import {NgxEchartsDirective, NgxEchartsModule} from "ngx-echarts";
     NgxEchartsDirective,
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts')
-    })
+    }),
+    MatSlider,
+    MatSliderThumb
   ],
   providers: [
     provideAnimationsAsync()

@@ -21,4 +21,8 @@ export class DataService {
     return this.http.delete('http://localhost:3000/characters/' + id);
   }
 
+  saveGraphData(id: string, data: number[]){
+    return this.http.patch('http://localhost:3000/characters/' + id, JSON.stringify({data: data}))
+  }
+
 }

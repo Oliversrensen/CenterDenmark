@@ -15,10 +15,8 @@ import {EChartsOption, SeriesOption} from "echarts";
 export class DetailPageComponent implements OnInit{
   characters$ : any = this.dataService.getAllCharacters();
   characterName : any;
-  character? : Characterdata;
+  character : Characterdata = {id:undefined, data:[], name:"", image:"", description:"", subtitle:""};
   echartsInstance: any;
-
-  isLoading = true;
   options: EChartsOption = {
     tooltip: {
       trigger: 'axis',
@@ -30,7 +28,7 @@ export class DetailPageComponent implements OnInit{
       },
     },
     legend: {
-      data: ['Kills', 'Average'],
+      data: ['Kill count'],
     },
     grid: {
       left: '3%',
@@ -52,19 +50,12 @@ export class DetailPageComponent implements OnInit{
     ],
     series: [
       {
-        name: 'Kills',
+        name: 'Kill count',
         type: 'line',
         stack: 'counts',
         areaStyle: {},
-        data: Array.from({length: 3}, () => Math.floor(Math.random() * 100)),
-      },
-      {
-        name: 'Average',
-        type: 'line',
-        stack: 'counts',
-        areaStyle: {},
-        data: Array.from({length: 3}, () => Math.floor(Math.random() * 100)),
-      },
+        data: this.character?.data,
+      }
     ],
   };
 
@@ -85,14 +76,26 @@ export class DetailPageComponent implements OnInit{
   }
 
   shuffleData()  {
+    let randData : number[] = Array.from({length: 3}, () => Math.floor(Math.random() * 100));
+    this.character!.data = randData;
     (this.options.series as SeriesOption[]).forEach(option =>
-      option['data'] = Array.from({length: 3}, () => Math.floor(Math.random() * 100)));
-    this.echartsInstance.setOption(this.options)
-
-
+      option['data'] = this.character!.data);
+    this.echartsInstance.setOption(this.options);
+    this.dataService.saveGraphData((this.character?.id as string), randData).subscribe()
   }
 
   onChartInit(ec: any) {
     this.echartsInstance = ec;
+    (this.options.series as SeriesOption[]).forEach(option =>
+      option['data'] = this.character?.data);
+    this.echartsInstance.setOption(this.options)
   }
+
+  saveSliders(){
+    (this.options.series as SeriesOption[]).forEach(option =>
+      option['data'] = this.character?.data);
+    this.echartsInstance.setOption(this.options)
+    this.dataService.saveGraphData((this.character?.id as string), this.character!.data).subscribe()
+  }
+
 }

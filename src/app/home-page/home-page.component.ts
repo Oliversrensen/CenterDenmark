@@ -10,7 +10,7 @@ import {Router} from "@angular/router";
   styleUrl: './home-page.component.css'
 })
 export class HomePageComponent {
-  newChar: Characterdata = {name:"", description:"", image:"", subtitle:""};
+  newChar: Characterdata = {name:"", description:"", image:"", subtitle:"", data: [], id: undefined};
 
   constructor(private modalService: NgbModal, private dataService: DataService, private router: Router) {
   }
@@ -22,7 +22,7 @@ export class HomePageComponent {
   public createChar(): void{
     this.dataService.addNewCharacter(this.newChar).subscribe()
     this.modalService.dismissAll()
-    location.reload()
+    this.characters$ = this.dataService.getAllCharacters();
   }
 
   goToDetails(name: string) {

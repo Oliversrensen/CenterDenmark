@@ -47,3 +47,10 @@ mat-card-subtitle {
 .input-group-text {
   width: 150px;
 }
+
+#deleteButton {
+  color: red;
+}
+mat-card-actions {
+  justify-content: space-between;
+}

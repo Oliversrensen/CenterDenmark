@@ -15,6 +15,7 @@
         </mat-card-content>
         <mat-card-actions>
           <button mat-button (click)="goToDetails(character.name)">Go to details</button>
+          <button id="deleteButton" mat-button (click)="deleteCharacter(character.id)">Delete</button>
         </mat-card-actions>
       </mat-card>
     </div>

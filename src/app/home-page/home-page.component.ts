@@ -30,8 +30,12 @@ export class HomePageComponent {
       ['/detail-page'],
       {queryParams: {name: name}}
     ).then();
-   }
+  }
+
+  deleteCharacter(id: string) {
+    this.dataService.deleteCharacter(id).subscribe();
+    location.reload()
+  }
 
   characters$ : any = this.dataService.getAllCharacters();
-
 }

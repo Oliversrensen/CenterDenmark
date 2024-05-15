@@ -17,8 +17,6 @@ export class DetailPageComponent implements OnInit{
   characterName : any;
   character? : Characterdata;
   echartsInstance: any;
-  data1 : number[] = [1, 2, 3]
-  data2 : number[] = [4, 5, 6]
 
   isLoading = true;
   options: EChartsOption = {
@@ -58,14 +56,14 @@ export class DetailPageComponent implements OnInit{
         type: 'line',
         stack: 'counts',
         areaStyle: {},
-        data: this.data1,
+        data: Array.from({length: 3}, () => Math.floor(Math.random() * 100)),
       },
       {
         name: 'Average',
         type: 'line',
         stack: 'counts',
         areaStyle: {},
-        data: this.data2,
+        data: Array.from({length: 3}, () => Math.floor(Math.random() * 100)),
       },
     ],
   };
@@ -92,12 +90,6 @@ export class DetailPageComponent implements OnInit{
     this.echartsInstance.setOption(this.options)
 
 
-  }
-
-  resizeChart() {
-    if (this.echartsInstance) {
-      this.echartsInstance.resize();
-    }
   }
 
   onChartInit(ec: any) {

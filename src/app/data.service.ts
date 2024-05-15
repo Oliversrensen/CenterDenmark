@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {filter, Observable} from "rxjs";
+import {Observable} from "rxjs";
 import {Characterdata} from "./characterdata";
 
 @Injectable({
@@ -17,6 +17,8 @@ export class DataService {
     return this.http.post('http://localhost:3000/characters', JSON.stringify(character));
   }
 
-
+  deleteCharacter(id: string): Observable<any> {
+    return this.http.delete('http://localhost:3000/characters/' + id);
+  }
 
 }
